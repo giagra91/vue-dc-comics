@@ -280,6 +280,7 @@ div#footer-bottom{
         text-transform: uppercase;
         padding: .7rem;
         font-size: .8rem;
+        font-weight: bold;
         border: 2px solid #0282f9;
       }
     }
