@@ -4,7 +4,7 @@
       <img src="../assets/images/dc-logo.png" alt="DC logo">
       <nav >
         <ul>
-          <li v-for="(link,index) in links" :key="index">
+          <li v-for="(link,index) in links" :key="index" @click="changeActiveLink(index)">
             <a :href="link.url" :class="{active: link.visible}">{{link.text}}</a>
           </li>
         </ul>
@@ -70,10 +70,20 @@ export default {
           visible: false
         },
       ]
-
     }
+  },
+  methods: {
+    changeActiveLink(activeIndex){
+      console.log(activeIndex)
+      this.links.forEach((element, index) => {
+        if (activeIndex === index){
+          element.visible = true;
+        } else {
+          element.visible = false;
+        }
+      })
+    },
   }
-
 }
 </script>
 
@@ -109,22 +119,22 @@ div.home-header{
           padding: 0 .3rem;
           text-transform: uppercase;
           font-size: .8rem;
+          cursor: pointer;
 
           &:hover{
-            border-bottom: 2px solid #0c7cec;
+            border-bottom: 5px solid #0c7cec;
           }
           a{
             text-decoration: none;
             font-weight: bold;
-            color: black;
+            color: #575757;
               &.active{
                             color: #0c7cec;
               }
           }
         }
+      }
     }
-    }
-
   }
 }
 </style>
