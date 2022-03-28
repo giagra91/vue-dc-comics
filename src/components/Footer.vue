@@ -232,6 +232,10 @@ div#footer-top{
           text-decoration: none;
           color: grey;
           font-size: .7rem;
+
+          &:hover{
+            color: white;
+          }
         }
       }
     }
