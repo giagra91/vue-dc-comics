@@ -6,7 +6,9 @@
       <Products />
     </main>
 
-    <Footer />
+    <footer>
+      <Footer />
+    </footer>
   </div>
 </template>
 
