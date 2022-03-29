@@ -2,9 +2,10 @@
   <div>
     <div class="products-wrapper">
       <div id="products">
+        <a id="current-series" href="#">Current Series</a>
         <ProductCard 
         v-for="(element, index) in ProductsContent" :key="index" :gameElement="element" />
-        <a href="#">Load more</a>
+        <a id="load-series" href="#">Load more</a>
       </div>
     </div>
     <div id="products-links">
@@ -128,18 +129,27 @@ div.products-wrapper{
       justify-content: center;
       flex-wrap: wrap;
       align-items: center;
-
-              a{
+      position: relative;
+        
+        a{
         width: 150px;
         background-color: $BrandColor;
         padding: .6rem 0;
         text-align: center;
-        margin-top: 2rem;
         text-decoration: none;
         color: white;
         text-transform: uppercase;
         font-size: .8rem;
         font-weight: bold;
+        }
+        a#load-series{
+          margin-top: 2rem;
+
+        }
+        a#current-series{
+          position: absolute;
+          left: 3%;
+          top: -3%;
         }
 
     }
