@@ -57,19 +57,19 @@
         </div>
         <div id="footer-follow-us">
           <h3>Follow us</h3>
-          <a href="#" class="pad-2">
+          <a href="#" class="mar-2">
             <img src="../assets/images/footer-facebook.png" alt="Facebook logo">
           </a>
-          <a href="#" class="pad-2">
+          <a href="#" class="mar-2">
             <img src="../assets/images/footer-twitter.png" alt="Twitter logo">
           </a>
-          <a href="#" class="pad-2">
+          <a href="#" class="mar-2">
             <img src="../assets/images/footer-youtube.png" alt="Youtube logo">
           </a>
-          <a href="#" class="pad-2">
+          <a href="#" class="mar-2">
             <img src="../assets/images/footer-pinterest.png" alt="Pinterest logo">
           </a>
-          <a href="#" class="pad-2">
+          <a href="#" class="mar-2">
             <img src="../assets/images/footer-youtube.png" alt="Periscope logo">
           </a>
         </div>
@@ -201,9 +201,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+@import "../assets/scss/partials/variables.scss";
+
 div#footer-top{
   width: 100%;
-  height: 290px;
+  height: 42vh;
   background-image: url("../assets/images/footer-bg.jpg");
 
   div#top-footer-wrapper{
@@ -254,13 +256,13 @@ div#footer-top{
   padding: 0 .8rem;
 }
 
-.pad-2{
-  padding: 0 .4rem;
+.mar-2{
+  margin: 0 .4rem;
 }
 
 div#footer-bottom{
   width: 100%;
-  height: 120px;
+  height: 14vh;
   background-color: #303030;
 
   div#footer-bottom-wrapper{
@@ -281,7 +283,7 @@ div#footer-bottom{
         padding: .7rem;
         font-size: .8rem;
         font-weight: bold;
-        border: 2px solid #0282f9;
+        border: 2px solid $BrandColor;
       }
     }
 
@@ -295,7 +297,7 @@ div#footer-bottom{
       font-weight: bold;
       padding: 0 1rem;
       font-size: 1rem;
-      color: #0282f9;
+      color: $BrandColor;
     }
   }
 

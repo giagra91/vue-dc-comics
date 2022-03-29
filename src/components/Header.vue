@@ -4,7 +4,7 @@
       <img src="../assets/images/dc-logo.png" alt="DC logo">
       <nav >
         <ul>
-          <li v-for="(link,index) in links" :key="index" @click="changeActiveLink(index)">
+          <li v-for="(link,index) in links" :class="{active: link.visible}" :key="index" @click="changeActiveLink(index)">
             <a :href="link.url" :class="{active: link.visible}">{{link.text}}</a>
           </li>
         </ul>
@@ -91,7 +91,7 @@ export default {
 <style lang="scss" scoped>
 div.home-header{
   width: 80%;
-  height: 100px;
+  height: 14vh;
   margin: 0 auto;
 
   div#header-container{
@@ -121,15 +121,18 @@ div.home-header{
           font-size: .8rem;
           cursor: pointer;
 
-          &:hover{
+          &:hover,
+          &.active{
             border-bottom: 5px solid #0c7cec;
           }
           a{
             text-decoration: none;
             font-weight: bold;
             color: #575757;
-              &.active{
-                            color: #0c7cec;
+
+              &.active,
+              &:hover{
+              color: #0c7cec;
               }
           }
         }
