@@ -4,10 +4,6 @@
       <div id="products">
         <ProductCard 
         v-for="(element, index) in ProductsContent" :key="index" :gameElement="element" />
-        <!-- <div class="products-card" v-for="(element, index) in ProductsContent" :key="index">
-          <img :src="element.thumb" :alt="element.series">
-          <p>{{element.series}}</p>
-        </div> -->
         <a href="#">Load more</a>
       </div>
     </div>
