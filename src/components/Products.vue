@@ -10,7 +10,10 @@
     </div>
     <div id="products-links">
       <div id="links-to-shop">
-        <h2>Prova</h2>
+        <div class="single-link" v-for="(element, index) in ShopContents" :key="index">
+          <img :src="require(`@/assets/images/` + element.img)" :alt="element.text">
+          <p>{{ element.text }}</p>
+        </div>
       </div>
     </div>
 
@@ -100,6 +103,28 @@ export default {
         "series": "Catwoman",
         "type": "graphic novel"
       }
+    ],
+    ShopContents: [
+      {
+        img: "buy-comics-digital-comics.png",
+        text: "Digital Comics"
+      },
+      {
+        img: "buy-comics-merchandise.png",
+        text: "Dc Merchandise"
+      },
+      {
+        img: "buy-comics-subscriptions.png",
+        text: "Subscription"
+      },
+      {
+        img: "buy-comics-shop-locator.png",
+        text: "Comic Shop Locator"
+      },
+      {
+        img: "buy-dc-power-visa.svg",
+        text: "Dc Power Visa"
+      },
     ]
     }
   }
@@ -164,7 +189,29 @@ div.products-wrapper{
         height: 100%;
         margin: 0 auto;
         display: flex;
+        justify-content: center;
         align-items: center;
+        color: white;
+
+        div.single-link{
+          height: 100%;
+          margin: 0 .8rem;
+          display: flex;
+          align-items: center;
+
+          img{
+            height: 35%;
+          }
+
+          p{
+            text-transform: uppercase;
+            margin-left: .5rem;
+            font-weight: bold;
+            font-size: .8rem;
+          }
+        }
+
+
       }
     }
 
